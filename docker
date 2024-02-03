@@ -2,3 +2,7 @@
 what is container ?
 A container is a lightweight, standalone, and executable software package that includes everything needed to run an application.
    including the code, runtime, libraries, and system tools.
+
+why continer's are lightweight ?
+Containers are lightweight because they share the host operating system's kernel and resources rather than virtualizing an entire operating system like traditional virtual machines (VMs).
+Here's why containers are lightweight:
