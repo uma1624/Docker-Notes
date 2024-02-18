@@ -27,3 +27,8 @@ Dockerfile :-
 Purpose: A file containing steps to build a Docker image.
 Syntax: Simple syntax for defining steps to create and run the image.
 Efficiency: Each instruction creates a layer, making image building efficient by only rebuilding changed layers.
+============================
+Docker Swarm :- 
+Docker Swarm is Docker's native clustering and orchestration tool.
+With Docker Swarm, you can deploy and manage a cluster of Docker hosts as a single virtual system, 
+making it easy to scale your applications, distribute workloads, and ensure high availability.
