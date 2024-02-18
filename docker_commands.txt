@@ -1,6 +1,9 @@
 Basic Docker Commands
 ====================
-docker run <image>: This command is used to start a container from a Docker image. For example, docker run nginx will start an Nginx server container. If the image is not found locally, Docker will pull it from the Docker Hub.
+docker run <image>: docker run is used to create and start a new container from a Docker image. For example, docker run nginx will start an Nginx server container. If the image is not found locally, Docker will pull it from the Docker Hub.
+
+docker start <container> : docker start is used to start an existing stopped container. 
+
 
 docker ps: Lists all running containers. Use docker ps -a to list both running and stopped containers. It's useful for seeing what's currently running on your machine.
 
