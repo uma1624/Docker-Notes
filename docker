@@ -6,3 +6,24 @@ A container is a lightweight, standalone, and executable software package that i
 why continer's are lightweight ?
 Containers are lightweight because they share the host operating system's kernel and resources rather than virtualizing an entire operating system like traditional virtual machines (VMs).
 Here's why containers are lightweight:
+
+
+Docker Daemon  :- 
+Functionality: Listens for Docker API requests and manages Docker objects like images, containers, networks, and volumes.
+Inter-daemon Communication: Can communicate with other daemons to manage Docker services.
+
+Docker Client  :- 
+Primary Interface: Used by Docker users to interact with Docker through commands like docker run.
+API Use: Sends commands to the Docker daemon using the Docker API.
+Multi-daemon Communication: Can communicate with more than one daemon.
+
+Docker Registries :-
+Functionality: Stores Docker images.
+Public Registry: Docker Hub is a public registry used by default.
+Private Registry: Users can run their own private registry.
+Commands: Images are pulled with docker pull or docker run and pushed with docker push.
+
+Dockerfile :- 
+Purpose: A file containing steps to build a Docker image.
+Syntax: Simple syntax for defining steps to create and run the image.
+Efficiency: Each instruction creates a layer, making image building efficient by only rebuilding changed layers.
