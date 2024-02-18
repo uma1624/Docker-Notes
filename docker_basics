@@ -31,12 +31,29 @@ Efficiency: Each instruction creates a layer, making image building efficient by
 
 docker life cycle :
 ===========
-Image Creation: A Docker image, encapsulating the application and its dependencies, is created from a Dockerfile or pulled from a registry.
-Container Initialization: The image is instantiated as a container, transitioning it from an inert state to an active one, ready for use.
-Running: The container is in a running state, actively executing the application processes.
-Paused: The running container can be paused, freezing its state and processes. This is useful for temporarily halting container execution without stopping it.
-Stop and Removal: Finally, the container can be stopped, which terminates its processes, and then removed from the system, along with optionally deleting the image if it's no longer needed.
-============================
+Image Creation:
+
+Create an image: docker build -t image_name:tag .
+Or pull an existing image from a registry: docker pull image_name:tag
+
+Container Initialization:
+Run a container from the image: docker run -d --name container_name image_name:tag
+
+Running:
+The container is now running in the background. Use docker ps to see running containers.
+
+Paused:
+Pause running container processes: docker pause container_name
+Unpause to resume processes: docker unpause container_name
+
+Stop and Removal:
+Stop the container: docker stop container_name
+Remove the container: docker rm container_name
+Optionally, remove the image if no longer needed: docker rmi image_name:tag
+
+
+
+
 Docker Swarm :- 
 Docker Swarm is Docker's native clustering and orchestration tool.
 With Docker Swarm, you can deploy and manage a cluster of Docker hosts as a single virtual system, 
