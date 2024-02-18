@@ -28,6 +28,14 @@ Dockerfile :-
 Purpose: A file containing steps to build a Docker image.
 Syntax: Simple syntax for defining steps to create and run the image.
 Efficiency: Each instruction creates a layer, making image building efficient by only rebuilding changed layers.
+
+docker life cycle :
+===========
+Image Creation: A Docker image, encapsulating the application and its dependencies, is created from a Dockerfile or pulled from a registry.
+Container Initialization: The image is instantiated as a container, transitioning it from an inert state to an active one, ready for use.
+Running: The container is in a running state, actively executing the application processes.
+Paused: The running container can be paused, freezing its state and processes. This is useful for temporarily halting container execution without stopping it.
+Stop and Removal: Finally, the container can be stopped, which terminates its processes, and then removed from the system, along with optionally deleting the image if it's no longer needed.
 ============================
 Docker Swarm :- 
 Docker Swarm is Docker's native clustering and orchestration tool.
