@@ -1,0 +1,70 @@
+
+# FROM
+Specifies the base image from which you are building. 
+  This is the starting point for your image and can be an existing Docker image from a repository or another Dockerfile.
+
+FROM ubuntu:18.04
+
+
+# LABEL
+Adds metadata to an image, such as version, description, or maintainer info. It's a key-value pair.
+
+LABEL maintainer="abc@gmail.com"
+
+
+# RUN
+Executes any commands in a new layer on top of the current image and commits the results. This directive is often used to install software packages.
+
+RUN apt-get update && apt-get install -y python3
+
+
+# CMD
+Provides defaults for an executing container. 
+  If Docker container runs without specifying a command, the default is used. You can include only one CMD directive in your Dockerfile.
+  If you list more than one CMD, then the last CMD will take effect.
+
+CMD ["python3", "./app.py"]
+
+
+# ENTRYPOINT
+Configures a container that will run as an executable. It allows you to configure a container that will run as an executable.
+
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
+
+
+# EXPOSE
+Informs Docker that the container listens on specific network ports at runtime. It does not actually publish the port.
+
+EXPOSE 80
+
+
+# ENV
+Sets the environment variable within the container. It's often used to pass configuration values.
+
+ENV APP_HOME /usr/src/app
+
+
+# ADD
+Copies new files, directories, or remote file URLs from `<src>` and adds them to the filesystem of the image at the path `<dest>`.
+
+ADD ./app /usr/src/app
+
+
+# COPY
+Copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`. 
+Unlike ADD, COPY does not handle remote URLs and does not unpack compressed files.
+
+COPY ./app /usr/src/app
+
+
+# VOLUME
+Creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.
+
+VOLUME /data
+
+
+# WORKDIR
+Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it in the Dockerfile.
+
+WORKDIR /usr/src/app
